@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { recuperarProductos } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 
-const ItemListContainer = ( {saludo} ) => {
+const ItemListContainer = ( {saludo, setPaginas} ) => {
 
   const [productos, setProductos] = useState([])
 
@@ -22,7 +22,7 @@ const ItemListContainer = ( {saludo} ) => {
         
         <h1 class="saludos">{saludo}</h1>
 
-        <ItemList productos={productos}/>
+        <ItemList productos={productos} setPaginas={setPaginas}/>
 
         </>
     
